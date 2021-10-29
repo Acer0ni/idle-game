@@ -1,8 +1,10 @@
+<iframe src="https://giphy.com/embed/EatwJZRUIv41G" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/keep-rollin-EatwJZRUIv41G">via GIPHY</a></p>
+
 # Project Overview
 
 ## Project Links
 
-- [add your github repo link]()
+https://git.generalassemb.ly/lflint/idle-game
 - [add your deployment link]()
 
 ## Project Description
@@ -11,18 +13,14 @@ my project will be a simple idle game that uses game ticks to raise a current st
 
 ## API
 https://avatars.dicebear.com/api/bottts/nathaniel.svg
+
 https://avatars.dicebear.com/api/bottts/micheal.svg
+
 https://avatars.dicebear.com/api/bottts/evan.svg
+
 https://avatars.dicebear.com/api/bottts/jason.svg
 
 this api doesnt return a bunch of data like the other ones, just .svgs of those cute little guys. i plan on using the players name as a seed for my api call and use that as the players avatar
-
-Use this section to include info about the API you have chosen and a code snippet of the data that it returns and is required for your project. 
-
-
-```
-{data: {} }
-```
 
 
 ## Wireframes
@@ -34,14 +32,7 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 
 ### MVP/PostMVP - 5min
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
-#### MVP EXAMPLE
-- character creation 
-- trainer iteration
-- saves
-- 
+ 
 
 #### PostMVP EXAMPLE
 
