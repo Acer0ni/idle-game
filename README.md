@@ -50,16 +50,16 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | splash page |entrance to choose name| 
 | trainer bar(S) | this will display the actual idle bar| 
 |stats page| display your current stats|
-|equipment page| displays current equipment(even if there is none to aquire)
+|equipment page| displays current equipment(even if there is none to acquire)
 
 
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
+Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evaluate game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Adding saves | m | 3hrs| 3.5hrs | 3.5hrs |
 | Working with API | H | 1| 2.5hrs | 2.5hrs |
-| setting up compenents | H | 4| 2.5hrs | 2.5hrs |
+| setting up components | H | 4| 2.5hrs | 2.5hrs |
 | making trainers work | H | 15| 2.5hrs | 2.5hrs |
 | calculating and displaying stats| H| 5 | | |
 |adding shop| L | 5 hours | | |
@@ -67,7 +67,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Total | H | 40hrs| 5hrs | 5hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
+ Use this section to list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, etc. 
 
 ## Code Snippet
 
