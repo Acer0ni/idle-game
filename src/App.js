@@ -5,14 +5,15 @@ import GamePage from './GamePage.js';
 import './App.css';
 
 function App() {
-  const[userAvatar,setUsername] = useState("")
+  const[userAvatar,setUserAvatar] = useState("")
 
   return (
     <div className="App">
-      <Route path="/"component={Entrance}/>
-      <Route path="/gamePage" component={GamePage} />
+      <Route path="/"render={()=><Entrance userAvatar={userAvatar}setUserAvatar={setUserAvatar}/>}/>
+      <Route path="/gamePage" render={()=><GamePage userAvatar={userAvatar}setUserAvatar={setUserAvatar}/>}/>
     </div>
   );
 }
 
 export default App;
+

@@ -1,4 +1,4 @@
-<iframe src="https://giphy.com/embed/EatwJZRUIv41G" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/keep-rollin-EatwJZRUIv41G">via GIPHY</a></p>
+
 
 # Project Overview
 
