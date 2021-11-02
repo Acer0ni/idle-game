@@ -27,7 +27,6 @@ const Entrance = (props) => {
 
   const inputRefName = useRef();
   const handleClick = (props) => {
-      console.log(props)
     setUserSeed(inputRefName.current.value);
     makeApiCall(userSeed);
   };
@@ -41,7 +40,6 @@ const Entrance = (props) => {
   let userAvatar = "";
   if (props.userAvatar) {
     userAvatar = <img src={props.userAvatar} alt="whoops" />;
-    console.log([userSeed]);
   }
 
   return (
@@ -50,9 +48,9 @@ const Entrance = (props) => {
       <h2 id="nameChoice">Please enter your name.</h2>
 
       <input ref={inputRefName} type="text" />
-      {/* <Link to="/gamePage"> */}
-      <button onClick={handleClick}>Create</button>
-      {/* </Link> */}
+      <Link to="/gamePage">
+        <button onClick={handleClick}>Create</button>
+      </Link>
     </div>
   );
 };
