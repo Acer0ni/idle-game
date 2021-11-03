@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Route path="/"render={()=><Entrance userAvatar={userAvatar}setUserAvatar={setUserAvatar}/>}/>
+      <Route path="/" exact render={()=><Entrance userAvatar={userAvatar}setUserAvatar={setUserAvatar}/>}/>
       <Route path="/gamePage" render={()=><GamePage userAvatar={userAvatar}setUserAvatar={setUserAvatar}/>}/>
     </div>
   );
