@@ -5,12 +5,12 @@ import GamePage from './GamePage.js';
 import './App.css';
 
 function App() {
-  const[userAvatar,setUserAvatar] = useState("")
+  const[userAvatarSeed,setUserAvatarSeed] = useState("")
 
   return (
     <div className="App">
-      <Route path="/" exact render={()=><Entrance userAvatar={userAvatar}setUserAvatar={setUserAvatar}/>}/>
-      <Route path="/gamePage" render={()=><GamePage userAvatar={userAvatar}setUserAvatar={setUserAvatar}/>}/>
+      <Route path="/" exact render={()=><Entrance userAvatarSeed={userAvatarSeed} setUserAvatarSeed={setUserAvatarSeed}/>}/>
+      <Route path="/gamePage" render={()=><GamePage userAvatarSeed={userAvatarSeed}/>}/>
     </div>
   );
 }

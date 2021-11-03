@@ -1,7 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import Action from "./Action";
+import Avatar from "./Avatar";
+import Stats from "./Stats";
+import Header from "./Header";
 
-const GamePage = () => {
+const GamePage = (props) => {
  
   const [stats, setStats] = useState({
     gold: 1,
@@ -79,20 +82,23 @@ const GamePage = () => {
     const interval = setInterval(() => {
       setGold(gold + goldIncrease);
       setTick(tick + 1);
-    }, 1000);
+    }, 15000);
     return () => clearInterval(interval);
-    // manageGameTicks();
+
   }, [gold, goldIncrease, tick]);
 
   return (
     <div>
-      {gold}
+     <div id="haha"> <Header gold={gold} userAvatarSeed={props.userAvatarSeed} /></div>
+      
+      
 
-      <Action levelUpCost={levelUpCost} actionType="gold" handleCurrentTask={handleCurrentTask} />
-      <Action levelUpCost={levelUpCost} actionType="hp" handleCurrentTask={handleCurrentTask} />
-      <Action levelUpCost={levelUpCost} actionType="attack" handleCurrentTask={handleCurrentTask} />
-      <Action levelUpCost={levelUpCost} actionType="str" handleCurrentTask={handleCurrentTask} />
-      <Action levelUpCost={levelUpCost} actionType="def" handleCurrentTask={handleCurrentTask} />
+      <Action levelUpCost={levelUpCost} level={stats.gold} actionType="gold" handleCurrentTask={handleCurrentTask} />
+      <Action levelUpCost={levelUpCost} level={stats.hp} actionType="hp" handleCurrentTask={handleCurrentTask} />
+      <Action levelUpCost={levelUpCost} level={stats.attack} actionType="attack" handleCurrentTask={handleCurrentTask} />
+      <Action levelUpCost={levelUpCost} level={stats.str} actionType="str" handleCurrentTask={handleCurrentTask} />
+      <Action levelUpCost={levelUpCost} level={stats.def}actionType="def" handleCurrentTask={handleCurrentTask} />
+      <Stats stats={stats} />
     </div>
   );
 };
