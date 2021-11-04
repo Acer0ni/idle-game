@@ -5,8 +5,8 @@ const Header = (props) => {
   return (
     <div id="header">
       <Avatar userAvatarSeed={props.userAvatarSeed} />
-      <p id="1">character:{props.userAvatarSeed}</p>
-      <p id="2"> gold:{props.gold}</p>
+      <p className="header-text" id="1">character:{props.userAvatarSeed}</p>
+      <p className="header-text" id="2"> gold:{props.gold}</p>
     </div>
   );
 };

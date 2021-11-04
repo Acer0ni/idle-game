@@ -86,38 +86,41 @@ const GamePage = (props) => {
       </div>
 
       <div id="container">
-      <Stats stats={stats} />
-        <Action
-          levelUpCost={levelUpCost}
-          level={stats.gold}
-          actionType="gold"
-          handleCurrentTask={handleCurrentTask}
-        />
-        <Action
-          levelUpCost={levelUpCost}
-          level={stats.hp}
-          actionType="hp"
-          handleCurrentTask={handleCurrentTask}
-        />
-        <Action
-          levelUpCost={levelUpCost}
-          level={stats.attack}
-          actionType="attack"
-          handleCurrentTask={handleCurrentTask}
-        />
-        <Action
-          levelUpCost={levelUpCost}
-          level={stats.str}
-          actionType="str"
-          handleCurrentTask={handleCurrentTask}
-        />
-        <Action
-          levelUpCost={levelUpCost}
-          level={stats.def}
-          actionType="def"
-          handleCurrentTask={handleCurrentTask}
-        />
-        
+        <div id="stats">
+          <Stats stats={stats} />
+        </div>
+        <div id="actions">
+          <Action
+            levelUpCost={levelUpCost}
+            level={stats.gold}
+            actionType="gold"
+            handleCurrentTask={handleCurrentTask}
+          />
+          <Action
+            levelUpCost={levelUpCost}
+            level={stats.hp}
+            actionType="hp"
+            handleCurrentTask={handleCurrentTask}
+          />
+          <Action
+            levelUpCost={levelUpCost}
+            level={stats.attack}
+            actionType="attack"
+            handleCurrentTask={handleCurrentTask}
+          />
+          <Action
+            levelUpCost={levelUpCost}
+            level={stats.str}
+            actionType="str"
+            handleCurrentTask={handleCurrentTask}
+          />
+          <Action
+            levelUpCost={levelUpCost}
+            level={stats.def}
+            actionType="def"
+            handleCurrentTask={handleCurrentTask}
+          />
+        </div>
       </div>
     </div>
   );

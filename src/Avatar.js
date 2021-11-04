@@ -31,9 +31,8 @@ const Avatar = (props) =>{
         makeApiCall()
       }
     
-    return <div id="avatar
-    ">
-       <img src={avatar} alt="whoops" /> 
+    return <div id="avatar">
+       <img id ="avatar-image" src={avatar} alt="whoops" /> 
     </div>
 }
 
