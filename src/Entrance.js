@@ -5,19 +5,14 @@ import Avatar from "./Avatar";
 const Entrance = (props) => {
   const [userSeed, setUserSeed] = useState("");
   const [avatar, setAvatar] = useState("");
-  console.log(props)
-  
 
   const inputRefName = useRef();
   const handleClick = () => {
     props.setUserAvatarSeed(inputRefName.current.value);
-   
   };
- 
-  
+
   return (
     <div>
-     
       <h2 id="nameChoice">Please enter your name.</h2>
 
       <input ref={inputRefName} type="text" />
