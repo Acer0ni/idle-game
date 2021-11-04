@@ -4,10 +4,19 @@ const Action = (props) => {
       className="action"
       onClick={() => props.handleCurrentTask(props.actionType)}
     >
-      <h4>
-        Train {props.actionType} ${props.levelUpCost[props.actionType]} current
-        level:{props.level}
-      </h4>
+      <div>
+        <p className="text">
+          <span className="subject">Train</span> {props.actionType} $
+          {props.levelUpCost[props.actionType]}
+        </p>{" "}
+        <p className="text">
+          <span
+            className="subject">
+            Current Level:
+          </span>
+          {props.level}
+        </p>
+      </div>
     </div>
   );
 };

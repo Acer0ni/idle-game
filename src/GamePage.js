@@ -5,14 +5,24 @@ import Stats from "./Stats";
 import Header from "./Header";
 
 const GamePage = (props) => {
+  
   const [stats, setStats] = useState({
     gold: 1,
     attack: 1,
     str: 1,
     def: 1,
     hp: 10,
+    currentGold: 100,
   });
   const [gold, setGold] = useState(100);
+  if(props.playerSave){
+    let player=localStorage.getItem()
+      if(player !== null){
+
+      }
+  }
+  
+
   const goldIncrease = stats.gold * 10;
   const levelUpBaseCost = 100;
   const [tick, setTick] = useState(0);
@@ -54,10 +64,13 @@ const GamePage = (props) => {
     def: levelDef,
     hp: levelHp,
   };
+  const saveGame = () =>{
+
+  }
 
   const handleCurrentTask = (task) => {
-    if (gold >= levelUpCost[task]) {
-      setGold(gold - levelUpCost[task]);
+    if (stats.currentGold >= levelUpCost[task]) {
+      stats.currentGold -= levelUpCost[task];
       actions[task]();
     } else {
       alert(
@@ -72,19 +85,24 @@ const GamePage = (props) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setGold(gold + goldIncrease);
+      stats.currentGold += goldIncrease;
       setTick(tick + 1);
     }, 1000);
     return () => clearInterval(interval);
-  }, [gold, goldIncrease, tick]);
+  }, [gold, goldIncrease, tick,stats]);
 
   return (
     <div>
       <div id="haha">
         {" "}
-        <Header gold={gold} userAvatarSeed={props.userAvatarSeed} />
+        <Header gold={stats.currentGold} userAvatarSeed={props.userAvatarSeed} />
       </div>
-
+        {/* <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/> */}
       <div id="container">
         <div id="stats">
           <Stats stats={stats} />

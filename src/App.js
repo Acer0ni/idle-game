@@ -6,14 +6,19 @@ import './App.css';
 
 function App() {
   const[userAvatarSeed,setUserAvatarSeed] = useState("")
-
+  const[playerSave,setPlayerSave] = useState(null)
+  console.log(playerSave)
   return (
     <div className="App">
-      <Route path="/" exact render={()=><Entrance userAvatarSeed={userAvatarSeed} setUserAvatarSeed={setUserAvatarSeed}/>}/>
-      <Route path="/gamePage" render={()=><GamePage userAvatarSeed={userAvatarSeed}/>}/>
+      
+      <Route path="/" exact render={()=> playerSave ? <GamePage playerSave={playerSave} setPlayerSave={setPlayerSave} userAvatarSeed={userAvatarSeed}/> : <Entrance userAvatarSeed={userAvatarSeed} setUserAvatarSeed={setUserAvatarSeed}/>}/>
+      <Route path="/gamePage" render={()=><GamePage playerSave={playerSave} setPlayerSave={setPlayerSave} userAvatarSeed={userAvatarSeed}/>}/>
     </div>
   );
 }
 
 export default App;
 
+
+// font-family: 'Bebas Neue', cursive;
+// font-family: 'Lato', sans-serif;
