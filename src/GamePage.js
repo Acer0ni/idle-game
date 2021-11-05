@@ -103,6 +103,9 @@ const GamePage = (props) => {
       stats.currentGold += goldIncrease;
       console.log(stats.currentGold);
       setTick(tick + 1);
+      if(tick % 15 === 0){
+        saveGame();
+      }
     }, 1000);
     return () => clearInterval(interval);
   }, [tick, goldIncrease]);
