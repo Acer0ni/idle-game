@@ -5,7 +5,6 @@ import Stats from "./Stats";
 import Header from "./Header";
 
 const GamePage = (props) => {
-  
   const [stats, setStats] = useState({
     gold: 1,
     attack: 1,
@@ -14,14 +13,28 @@ const GamePage = (props) => {
     hp: 10,
     currentGold: 100,
   });
-  const [gold, setGold] = useState(100);
-  if(props.playerSave){
-    let player=localStorage.getItem()
-      if(player !== null){
-
+  const [count, setCounter] = useState(0);
+  const loadSave = () => {
+    if (count === 0) {
+      let player = localStorage.getItem("player");
+      if (player !== null) {
+        console.log(player);
+        let playerJson = JSON.parse(player);
+        props.setPlayerSave(playerJson);
+        console.log(props.playerSave);
+        console.log(playerJson);
+        setStats({
+          gold: playerJson.gold,
+          attack: playerJson.attack,
+          str: playerJson.str,
+          def: playerJson.def,
+          hp: playerJson.hp,
+          currentGold: playerJson.currentGold,
+        });
+        setCounter(1);
       }
-  }
-  
+    }
+  };
 
   const goldIncrease = stats.gold * 10;
   const levelUpBaseCost = 100;
@@ -64,9 +77,10 @@ const GamePage = (props) => {
     def: levelDef,
     hp: levelHp,
   };
-  const saveGame = () =>{
-
-  }
+  const saveGame = () => {
+    let splayer = JSON.stringify(stats);
+    localStorage.setItem("player", splayer);
+  };
 
   const handleCurrentTask = (task) => {
     if (stats.currentGold >= levelUpCost[task]) {
@@ -84,25 +98,26 @@ const GamePage = (props) => {
   };
 
   useEffect(() => {
+    loadSave();
     const interval = setInterval(() => {
       stats.currentGold += goldIncrease;
+      console.log(stats.currentGold);
       setTick(tick + 1);
     }, 1000);
     return () => clearInterval(interval);
-  }, [gold, goldIncrease, tick,stats]);
+  }, [tick, goldIncrease]);
 
   return (
     <div>
       <div id="haha">
         {" "}
-        <Header gold={stats.currentGold} userAvatarSeed={props.userAvatarSeed} />
+        <Header
+          saveGame={saveGame}
+          gold={stats.currentGold}
+          userAvatarSeed={props.userAvatarSeed}
+        />
       </div>
-        {/* <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/> */}
+
       <div id="container">
         <div id="stats">
           <Stats stats={stats} />

@@ -1,4 +1,4 @@
-import { getByPlaceholderText } from "@testing-library/dom";
+
 import { useState } from "react";
 import Avatar from "./Avatar";
 const Header = (props) => {
@@ -10,7 +10,7 @@ const Header = (props) => {
       <p className="header-text" id="2"> gold:{props.gold}</p>
       
       </div>
-      <p className="save">save</p>
+      <p onClick={props.saveGame} className="save">save</p>
     </div>
   );
 };
