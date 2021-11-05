@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/idle-game/static/css/main.1bc02a6d.chunk.css",
+    "main.js": "/idle-game/static/js/main.b7f73c1a.chunk.js",
+    "main.js.map": "/idle-game/static/js/main.b7f73c1a.chunk.js.map",
+    "runtime-main.js": "/idle-game/static/js/runtime-main.3a991c05.js",
+    "runtime-main.js.map": "/idle-game/static/js/runtime-main.3a991c05.js.map",
+    "static/js/2.b63d0f25.chunk.js": "/idle-game/static/js/2.b63d0f25.chunk.js",
+    "static/js/2.b63d0f25.chunk.js.map": "/idle-game/static/js/2.b63d0f25.chunk.js.map",
+    "static/js/3.513f3cb0.chunk.js": "/idle-game/static/js/3.513f3cb0.chunk.js",
+    "static/js/3.513f3cb0.chunk.js.map": "/idle-game/static/js/3.513f3cb0.chunk.js.map",
+    "index.html": "/idle-game/index.html",
+    "static/css/main.1bc02a6d.chunk.css.map": "/idle-game/static/css/main.1bc02a6d.chunk.css.map",
+    "static/js/2.b63d0f25.chunk.js.LICENSE.txt": "/idle-game/static/js/2.b63d0f25.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3a991c05.js",
+    "static/js/2.b63d0f25.chunk.js",
+    "static/css/main.1bc02a6d.chunk.css",
+    "static/js/main.b7f73c1a.chunk.js"
+  ]
+}
